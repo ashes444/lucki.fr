@@ -1,0 +1,54 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link rel="shortcut icon" href="img//favicon.jpg" />
+<link rel="icon" href="img/favicon.png" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="LUCKI.FR">
+<meta property="og:description" content="All Socialsl">
+<meta property="og:url" content="https://lucki.fr">
+<meta property="og:image" content="">
+</head>
+<body>
+<audio id="background_song" onended="newSong(undefined, ',over_u.mp3, habits.mp3, the_end.mp3, soulja_rag.mp3, rocket.mp3')" src="music/all_black.mp3"></audio>
+<video autoplay muted loop id="myVideo">
+    <source src="wallpapers/background.mp4" type="video/mp4">
+  </video>
+<title>LUCKI.FR</title>
+<div id="screen">
+<div id="message" class="is-hidden is-removed"></div>
+<font size="5" id="name">Forget</font>
+<hr>
+<a href="https://twitter.com/flawlessforget" target="_blank" class="social_link">Twitter</a>
+<br>
+<a href="https://instagram.com/tgeu" target="_blank" class="social_link">IG</a>
+<br>
+<a href="https://ogu.gg/4get" target="_blank" class="social_link">OGU</a>
+<br>
+<a href="https://discord.gg/lucki" target="_blank" class="social_link">Discord Server</a>
+<br>
+<a id="discordid" onclick="window.open('https:\/\/discord.com\/users\/498178443792613399')">Discord</a>
+<a a>
+    <br>
+    <br>
+<hr>
+<div>
+<img src="img/reverse.png" id="reverse" style="cursor: pointer" onclick="newSong('reverse', 'over_u.mp3,habits.mp3,the_end.mp3,soulja_rag.mp3,rocket.mp3')">
+<input class="connected" type="range" min="0" max="100" value="20" id="volume_slider" oninput="changeVolume(this.value)" onchange="changeVolume(this.value)">
+<img src="img/skip.png" id="skip" style="cursor: pointer" onclick="newSong('skip', 'over_u.mp3,habits.mp3,the_end.mp3,soulja_rag.mp3,rocket.mp3')">
+<br>
+<img src="img/play.png" id="state" style="cursor: pointer" onclick="songHandler()">
+</div>
+</a>
+</div>
+
+<a a>
+<font size="3" id="song_title" class="content">Currently Playing: over_u.mp3 </font>
+<script defer src="script/app2.js"></script>
+<script src="script/app.js"></script>
+</a>
+
+
+</body>
+</html>
