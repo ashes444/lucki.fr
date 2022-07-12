@@ -14,7 +14,7 @@ function changeVolume(newV) {
 function newSong(type, song_list) {
     try {
         song_list = song_list.split(",");
-        let newIndex = song_list.indexOf(decodeURI(document.getElementById('background_song').src.split("music/")[1]));
+        let newIndex = song_list.indexOf(decodeURI(document.getElementById('background_song').src.split("/music/")[1]));
         if (newIndex === -1)
             newIndex = 0;
         if (type === "skip" || type === undefined) {
@@ -36,7 +36,7 @@ function changeSource(song_file) {
     let song_title = document.getElementById("song_title");
     let state = document.getElementById("state");
     if (background_song.paused) {
-        background_song.src = "music/" + song_file;
+        background_song.src = "/music/" + song_file;
         song_title.innerHTML = "Currently Playing: " + song_file;
         let i = 0;
         while (i != 3) {
@@ -56,7 +56,7 @@ function changeSource(song_file) {
         // state.src = "img/pause.png"
     } else {
         background_song.pause();
-        background_song.src = "music/" + song_file;
+        background_song.src = "/music/" + song_file;
         song_title.innerHTML = "Currently Playing: " + song_file;
         let i = 0;
         while (i != 3) {
@@ -81,10 +81,10 @@ function songHandler() {
     let state = document.getElementById("state");
     if (background_song.paused) {
         background_song.play();
-        state.src = "img/pause.png"
+        state.src = "/img/pause.png"
     } else {
         background_song.pause();
-        state.src = "img/play.png"
+        state.src = "/img/play.png"
     }
 }
 
